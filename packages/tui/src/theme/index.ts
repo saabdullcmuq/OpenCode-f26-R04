@@ -289,7 +289,7 @@ export function resolveTheme(theme: ThemeJson, mode: "dark" | "light") {
   }
 
   // Handle thinkingOpacity - optional with default of 0.6
-  const thinkingOpacity = theme.theme.thinkingOpacity ?? 0.6
+  const thinkingOpacity = theme.theme.thinkingOpacity ?? 0.8
 
   return {
     ...resolved,
@@ -400,7 +400,7 @@ export function generateSystem(colors: TerminalColors, mode: "dark" | "light"): 
       // Primary colors using ANSI
       primary: ansiColors.cyan,
       secondary: ansiColors.magenta,
-      accent: ansiColors.cyan,
+      accent: ansiColors.magenta,
 
       // Status colors using ANSI
       error: ansiColors.red,

@@ -1,0 +1,13 @@
+{
+  "name": "Bun Development Environment",
+  "image": "node:20-bookworm",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Oven.bun-vscode"
+      ]
+    }
+  },
+  "forwardPorts": [],
+  "postCreateCommand": "curl -fsSL https://bun.sh | bash && export BUN_INSTALL=\"$HOME/.bun\" && export PATH=\"$BUN_INSTALL/bin:$PATH\" && bun install"
+}
